@@ -1,9 +1,14 @@
 <p>list works!</p>
 
-<ul>
-    @for (product of products; track product.id) {
-        <li>
-            {{ product.name }}
-        </li>
-    }
-</ul>
+<div>
+    <mat-card appearance="outlined" *ngFor="let product of products">
+        <mat-card-header>
+            <mat-card-title>{{ product.id }}</mat-card-title>
+            <mat-card-title>{{ product.name }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-actions>
+            <button mat-button>Edit</button>
+            <button mat-button>Delete</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
